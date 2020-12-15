@@ -1,0 +1,20 @@
+{
+  "name": "commit-watch",
+  "private": true,
+  "version": "0.0.0",
+  "description": "github action for commit watch",
+  "main": "src/index.js",
+  "repository": "git@github.com:tophat/commit-watch-action.git",
+  "author": "Top Hat Monocle Corp. <opensource@tophat.com>",
+  "license": "Apache-2.0",
+  "scripts": {
+    "clean": "rm -rf ${ARTIFACT_DIR:-artifacts} ./.yarn/cache .pnp.js"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0"
+  }
+}
