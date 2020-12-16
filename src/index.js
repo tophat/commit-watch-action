@@ -22,7 +22,7 @@ try {
 
     try {
         execSync(`yarn dlx commit-watch@${version}`, {
-            stdio: 'inherit',
+            stdio: ['ignore', process.stdout, 'inherit'],
             env: {
                 COMMITWATCH_GITHUB_TOKEN: token,
                 COMMIT_WATCH_OUTPUT_DIR: artifactDir,
