@@ -13,7 +13,7 @@ try {
     const artifactDir = core.getInput('artifact_dir')
     const version = _sanitizeVersion(core.getInput('version'))
     const event = github.context.payload
-
+    console.log(event)
     if (!SUPPORTED_EVENTS.includes(event.eventName)) {
         throw new Error(`Event type not one of ${SUPPORTED_EVENTS}.`)
     }
