@@ -3,8 +3,8 @@ const core = require('@actions/core')
 const github = require('@actions/github')
 
 try {
-    const token = core.getInput('github-token', { required: true })
-    const artifactDir = core.getInput('artifact-dir')
+    const token = core.getInput('github_token', { required: true })
+    const artifactDir = core.getInput('artifact_dir')
     const event = github.context.payload
     const [owner, name] = event.repository.full_name.split('/')
 

@@ -16,8 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     uses: tophat/commit-watch-action@v1.0
     with:
-      github-token: ${{ secrets.GH_TOKEN }}
-      artifact-dir: ./artifacts
+      github_token: ${{ secrets.GH_TOKEN }}
+      artifact_dir: ./artifacts
 ```
 
 ## License
