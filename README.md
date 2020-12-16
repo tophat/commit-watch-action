@@ -14,10 +14,17 @@ Requires yarn to be installed, which is installed by default in `ubuntu-latest`.
 jobs:
   lint:
     runs-on: ubuntu-latest
-    uses: tophat/commit-watch-action@v1.0
-    with:
-      github-token: ${{ secrets.GH_TOKEN }}
-      artifact-dir: ./artifacts
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - uses: tophat/commit-watch-action@v1.0
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          artifact_dir: ./artifacts
+          version: 'latest'
 ```
 
 ## License

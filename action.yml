@@ -1,13 +1,17 @@
 name: 'Commit Watch'
 description: 'Lint commit messages using Commit Watch'
 inputs:
-  github-token:
+  github_token:
     description: 'Personal access token to update github status.'
     required: true
-  artifact-dir:
+  artifact_dir:
     description: 'Directory to store run artifacts.'
     required: false
     default: './artifacts'
+  version:
+    description: 'Version of Commit Watch to use.'
+    required: false
+    default: 'latest'
 runs:
   using: 'node12'
   main: 'src/yarn-bootstrap.js'

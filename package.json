@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@actions/core": "^1.2.6",
-    "@actions/github": "^4.0.0"
+    "@actions/github": "^4.0.0",
+    "semver-regex": "^3.1.1"
   }
 }
