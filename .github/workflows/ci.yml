@@ -20,5 +20,3 @@ jobs:
         with:
           artifact_dir: ${{ env.ARTIFACT_DIR }}
           github_token: ${{ secrets.GH_TOKEN }}
-        env:
-          DEBUG: 1
