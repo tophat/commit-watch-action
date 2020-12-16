@@ -1,0 +1,19 @@
+on: [pull_request]
+
+env:
+  ARTIFACT_DIR: ./artifacts
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Create Artifact Dir
+        run: mkdir -p ${{ env.ARTIFACT_DIR }}
+      - name: Run Action
+        uses: ./
+        with:
+          artifact-dir: ${{ env.ARTIFACT_DIR }}
+          github-token: ${{ secrets.GH_TOKEN }}
