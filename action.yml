@@ -10,7 +10,7 @@ inputs:
     default: './artifacts'
 runs:
   using: 'node12'
-  main: 'yarn-bootstrap.js'
+  main: 'src/yarn-bootstrap.js'
 branding:
   color: blue
   icon: eye
