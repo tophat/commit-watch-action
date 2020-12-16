@@ -12,17 +12,17 @@ try {
     const token = core.getInput('github_token', { required: true })
     const artifactDir = core.getInput('artifact_dir')
     const version = _sanitizeVersion(core.getInput('version'))
-    const event = github.context.payload
-    console.log(github.context)
-    if (!SUPPORTED_EVENTS.includes(event.eventName)) {
-        throw new Error(`Event type not one of ${SUPPORTED_EVENTS}.`)
+
+    if (!SUPPORTED_EVENTS.includes(event.context.eventName)) {
+        throw new Error(`Event type not one of ${SUPPORTED_EVENTS.join(', ')}.`)
     }
 
+    const event = github.context.payload
     const [owner, name] = event.repository.full_name.split('/')
 
     try {
         execSync(`yarn dlx commit-watch@${version}`, {
-            stdio: ['ignore', process.stdout, 'inherit'],
+            stdio: ['ignore', process.stdout, process.stderr],
             env: {
                 COMMITWATCH_GITHUB_TOKEN: token,
                 COMMIT_WATCH_OUTPUT_DIR: artifactDir,
