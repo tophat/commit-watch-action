@@ -165,6 +165,7 @@ __metadata:
   dependencies:
     "@actions/core": ^1.2.6
     "@actions/github": ^4.0.0
+    semver-regex: ^3.1.1
   languageName: unknown
   linkType: soft
 
@@ -195,6 +196,13 @@ __metadata:
   dependencies:
     wrappy: 1
   checksum: 57afc246536cf6494437f982b26475f22bee860f8b77ce8eb1543f42a8bffe04b2c66ddfea9a16cb25ccb80943f8ee4fc639367ef97b7a6a4f2672eb573963f5
+  languageName: node
+  linkType: hard
+
+"semver-regex@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "semver-regex@npm:3.1.1"
+  checksum: 3f2351223c8ea2afbd9d36b8ad983fc3896aebd03c9ad6216cbed2ae9d32fda62da84b8cbca70fe487e4e1609f4ec68a17b4f526086fade830661ab76c1f147d
   languageName: node
   linkType: hard
 

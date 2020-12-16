@@ -18,5 +18,5 @@ jobs:
       - name: Run Action
         uses: ./
         with:
-          artifact-dir: ${{ env.ARTIFACT_DIR }}
-          github-token: ${{ secrets.GH_TOKEN }}
+          artifact_dir: ${{ env.ARTIFACT_DIR }}
+          github_token: ${{ secrets.GH_TOKEN }}

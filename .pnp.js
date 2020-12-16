@@ -38,7 +38,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@actions/core", "npm:1.2.6"],
-            ["@actions/github", "npm:4.0.0"]
+            ["@actions/github", "npm:4.0.0"],
+            ["semver-regex", "npm:3.1.1"]
           ],
           "linkType": "SOFT",
         }]
@@ -244,7 +245,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["commit-watch", "workspace:."],
             ["@actions/core", "npm:1.2.6"],
-            ["@actions/github", "npm:4.0.0"]
+            ["@actions/github", "npm:4.0.0"],
+            ["semver-regex", "npm:3.1.1"]
           ],
           "linkType": "SOFT",
         }]
@@ -282,6 +284,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["once", "npm:1.4.0"],
             ["wrappy", "npm:1.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["semver-regex", [
+        ["npm:3.1.1", {
+          "packageLocation": "./.yarn/cache/semver-regex-npm-3.1.1-075fc3cdd7-3f2351223c.zip/node_modules/semver-regex/",
+          "packageDependencies": [
+            ["semver-regex", "npm:3.1.1"]
           ],
           "linkType": "HARD",
         }]
