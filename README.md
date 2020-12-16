@@ -24,6 +24,7 @@ jobs:
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           artifact_dir: ./artifacts
+          version: 'latest'
 ```
 
 ## License
