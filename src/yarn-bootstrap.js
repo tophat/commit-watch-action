@@ -4,5 +4,5 @@ const index = path.resolve(__dirname, 'index.js')
 
 execSync(
     `yarn node ${index}`,
-    { stdio: ['ignore', 'ignore', 'inherit'] },
+    { stdio: process.env.DEBUG ? 'inherit' : ['ignore', 'ignore', 'inherit'] },
 )
