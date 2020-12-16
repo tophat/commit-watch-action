@@ -20,7 +20,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
-      - uses: tophat/commit-watch-action@v1.0
+      - uses: tophat/commit-watch-action@v0.0.3
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           artifact_dir: ./artifacts
