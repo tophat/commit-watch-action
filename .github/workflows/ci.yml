@@ -19,4 +19,4 @@ jobs:
         uses: ./
         with:
           artifact_dir: ${{ env.ARTIFACT_DIR }}
-          github_token: ${{ secrets.GH_TOKEN }}
+          github_token: ${{ secrets.TOPHAT_BOT_GH_TOKEN }}
